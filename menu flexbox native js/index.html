@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Базовый курс "Всё в твоих руках"</title>
+</head>
+<body>
+
+	<header class="header">
+		<div class="container">
+			<nav class="navbar">
+				<div class="brand">
+					LOGO
+				</div>
+				<div class="menu__burger" id="hamburger">
+					<a href="#" class="icon">
+						<span></span>
+					</a>
+				</div>
+				
+				<div class="menu__section" id="menu">
+					<a href="#" class="menu__item">Базовый курс</a>
+					<a href="#" class="menu__item">Тренера</a>
+					<a href="#" class="menu__item">Отзывы</a>
+					<a href="#" class="menu__item">Контакты</a>
+					<a href="#" class="menu__item">+7 908 643-44-05</a>
+				</div>
+			</nav>
+
+		</div>
+
+	</header>
+
+	<script>
+		var hamburger = document.getElementById("hamburger");
+		hamburger.onclick = function(event) {
+			event.preventDefault();
+			var menu = document.getElementById("menu");
+			hamburger.classList.toggle("menu__burger_open");
+			menu.classList.toggle("menu__section_open");
+		}
+		</script>
+
+</body>
+</html>

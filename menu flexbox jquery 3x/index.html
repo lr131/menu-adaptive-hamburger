@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+	<title>Базовый курс "Всё в твоих руках"</title>
+</head>
+<body>
+
+	<header class="header">
+		<div class="container">
+			<nav class="navbar">
+				<div class="brand">
+					LOGO
+				</div>
+				<div class="menu__burger">
+					<a href="#" class="icon">
+						<span></span>
+					</a>
+					<!-- <a href="javascript:void(0);"  onclick="myFunction()">
+						
+						<i class="fa fa-bars"></i> 
+					</a> -->
+				</div>
+				
+				<div class="menu__section" id="menu">
+					<a href="#" class="menu__item">Базовый курс</a>
+					<a href="#" class="menu__item">Тренера</a>
+					<a href="#" class="menu__item">Отзывы</a>
+					<a href="#" class="menu__item">Контакты</a>
+					<a href="#" class="menu__item">+7 908 643-44-05</a>
+				</div>
+			</nav>
+
+		</div>
+
+	</header>
+
+	<script>
+		$('.menu__burger').on('click', function(e) {
+			e.preventDefault;
+			$(this).toggleClass('menu__burger_open');
+			$("#menu").toggleClass('menu__section_open');
+
+		});
+		// function myFunction() {
+		// 		var x = document.getElementById("menu");
+		// 		if (x.className === "menu__section") {
+		// 				x.className += " responsive";
+		// 		} else {
+		// 				x.className = "menu__section";
+		// 		}
+		// }
+		</script>
+
+</body>
+</html>

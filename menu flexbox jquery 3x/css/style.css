@@ -1,0 +1,152 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  color: #32325f;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1140px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header{
+  /* background-color: #f4f5f7; */
+  background-color: #cbccd0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  color: #95989a;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu__section{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.menu__section a{
+  float: left;
+  display: block;
+  color: #32325f;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the menu__section on small screens */
+.menu__burger{
+  display: none;
+}
+
+
+.menu__burger .icon span,
+.menu__burger .icon span::before,
+.menu__burger .icon span::after {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+}
+
+.menu__burger .icon span::before,
+.menu__burger .icon span::after{
+  content: '';
+  display: block;
+  transition: 0.2s;
+}
+
+.menu__burger .icon span::before{
+  transform: translateY(-5px);
+}
+
+.menu__burger .icon span::after{
+  transform: translateY(5px);
+}
+
+.menu__burger_open .icon span:before {
+  transform: rotate(45deg);
+}
+
+.menu__burger_open .icon span::after {
+  transform: rotate(-45deg);
+}
+
+.menu__burger_open .icon span {
+  height: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__section {display: none;}
+
+  .menu__burger{
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    flex-basis: 10%;
+    flex-shrink: 0;
+  }
+
+  .menu__section_open {
+    display: flex !important;
+    flex-direction: column;
+
+  }
+  .navbar{
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  .brand{
+    flex-basis: 90%;
+    flex-shrink: 3;
+  }
+  
+}
+
+/* When the screen is less than 600 pixels wide, hide all links. Show the link that contains should open and close the menu__section (.icon) */
+@media screen and (max-width: 768px) {
+  .menu__section {display: none;}
+}
+
+/* The "responsive" class is added to the menu__section with JavaScript when the user clicks on the icon. This class makes the menu__section look good on small screens (display the links vertically instead of horizontally)
+@media screen and (max-width: 768px) {
+  .menu__section.responsive {position: relative;}
+  .menu__section.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .menu__section.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+} */
